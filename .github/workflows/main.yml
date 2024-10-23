@@ -21,15 +21,16 @@ jobs:
            aws-session-token: ${{ secrets.AWS_SESSION_TOKEN }}
            aws-region: "us-east-1"
 
-      - name: INSTALAR TERRAFORM EN LA MÁQUINA VIRTUAL
-        uses: 
+      - name: HashiCorp - Setup Terraform
+        uses: hashicorp/setup-terraform@v2.0.3
+        
 
       - name: INICIALIZAR TERRAFORM
-        run: 
+        run: terraform init
        
 
       - name: Plan Terraform
-        run: 
+        run: terraform plan
 
       - name: Apply Terraform
-        run: 
+        run: terraform apply -auto-approve
