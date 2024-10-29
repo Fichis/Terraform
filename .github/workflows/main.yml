@@ -29,6 +29,7 @@ jobs:
         run: terraform init
 
       - name: Plan Terraform
+        working-directory: ./Terraform
         run: terraform plan
 
       - name: Apply Terraform
