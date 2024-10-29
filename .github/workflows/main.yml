@@ -3,7 +3,7 @@ name: Terraform AWS Deployment
 on:
   push:
     branches: 
-      - RAMA
+      - main
 
 jobs:
   despliegue:
@@ -27,7 +27,6 @@ jobs:
 
       - name: INICIALIZAR TERRAFORM
         run: terraform init
-       
 
       - name: Plan Terraform
         run: terraform plan
